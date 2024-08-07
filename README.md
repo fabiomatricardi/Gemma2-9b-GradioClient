@@ -2,6 +2,8 @@
 Run with API call to Hugging Face Spaces Gemma2-9B model
 
 
+<img src='https://github.com/fabiomatricardi/Gemma2-9b-GradioClient/raw/main/Gemma2-9b-gradioAPI.gif' width=900>
+
 ### Instructions
 You can git clone the repo or do it yourself.
 
