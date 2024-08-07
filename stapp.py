@@ -136,7 +136,7 @@ if myprompt := st.chat_input("What is an AI model?"):
                 assistanttokens = len(encoding.encode(full_response))
                 totaltokens = prompttokens + assistanttokens  
                 st.session_state.speed = totaltokens/totalseconds   
-                statspeed.markdown(f'💫 speed: {st.session_state.speed}  t/s')                    
+                statspeed.markdown(f'💫 speed: {st.session_state.speed:.2f}  t/s')                    
             
             delta = datetime.datetime.now() - start
             totalseconds = delta.total_seconds()
@@ -144,14 +144,14 @@ if myprompt := st.chat_input("What is an AI model?"):
             assistanttokens = len(encoding.encode(full_response))
             totaltokens = prompttokens + assistanttokens
             speed = totaltokens/totalseconds
-            statspeed.markdown(f'💫 speed: {st.session_state.speed}  t/s')
+            statspeed.markdown(f'💫 speed: {st.session_state.speed:.2f}  t/s')
             toregister = full_response + f"""
 ```
 
 🧾 prompt tokens: {prompttokens}
 📈 generated tokens: {assistanttokens}
 ⏳ generation time: {delta}
-💫 speed: {st.session_state.speed}  t/s
+💫 speed: {st.session_state.speed:.3f}  t/s
 ```"""    
             message_placeholder.markdown(toregister)
             asstext = f"assistant: {toregister}"
