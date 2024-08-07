@@ -63,8 +63,8 @@ if "logfilename" not in st.session_state:
 @st.cache_resource
 def create_client():   
     print('loading the API gradio client for gemma-2-9b-it')
-    yourHFtoken = "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"
-    client = Client("huggingface-projects/gemma-2-9b-it", hf_token=yourHFtoken)  #, hf_token=yourHFtoken
+    yourHFtoken = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # put here you HF token
+    client = Client("huggingface-projects/gemma-2-9b-it", hf_token=yourHFtoken)  
     return client
 
 #AVATARS
